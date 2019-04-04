@@ -7,6 +7,7 @@
 //
 
 #import "MJViewController.h"
+#import "MJAdaptScreenHelp.h"
 
 @interface MJViewController ()
 

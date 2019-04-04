@@ -12,7 +12,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-//静态全局变量,若用宏定义，则浪费空间,下划线用来与属性相区别
 static const CGFloat mj_originWidth_ = 375.f;//iphone6为基准
 static const CGFloat mj_originHeight_ = 667.f;
 
@@ -44,7 +43,7 @@ DH_INLINE CGFloat mj_statusBarHeight() {
 }
 
 DH_INLINE CGFloat mj_navigationHeight() {
-    if (isiPhoneX()) {
+    if (mj_isiPhoneX()) {
         return 88.00;
     }
     return 64.00;
@@ -101,7 +100,7 @@ DH_INLINE CGPoint mj_flexibleCenter(CGPoint center, BOOL adjustWidth) {//基准�
  *
  *  @return 适配后的size
  */
-DH_INLINE CGSize flexibleSize(CGSize size,BOOL adjustWidth) {
+DH_INLINE CGSize mj_flexibleSize(CGSize size,BOOL adjustWidth) {
     if (adjustWidth) {
         return CGSizeMake(size.width * mj_verticalRatio(), size.height * mj_verticalRatio());
     }
@@ -110,7 +109,7 @@ DH_INLINE CGSize flexibleSize(CGSize size,BOOL adjustWidth) {
 
 DH_INLINE CGRect mj_flexibleFrame(CGRect frame,BOOL adjustWidth) {
     //拿到frame的center,然后对x y等比例缩放
-    CGPoint center = centerFromFrame(frame);
+    CGPoint center = mj_centerFromFrame(frame);
     center = mj_flexibleCenter(center, adjustWidth);
     //对宽高等比例缩放，拿到一个CGSize
     CGSize size = mj_flexibleSize(frame.size, adjustWidth);
@@ -119,7 +118,7 @@ DH_INLINE CGRect mj_flexibleFrame(CGRect frame,BOOL adjustWidth) {
 }
 
 DH_INLINE CGFloat mj_flexibleHeight(CGFloat height) {
-    return height * VerticalRatio();
+    return height * mj_verticalRatio();
 }
 
 DH_INLINE CGFloat mj_flexibleWidth(CGFloat width) {
