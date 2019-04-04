@@ -1,0 +1,1 @@
+../../../../../MJAdaptScreenHelp/Classes/MJAdaptScreenHelp.h

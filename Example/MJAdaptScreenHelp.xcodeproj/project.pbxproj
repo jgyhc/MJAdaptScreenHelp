@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		1C1DFB98A7D380DC5537BC34 /* Pods_MJAdaptScreenHelp_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MJAdaptScreenHelp_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A2D666FEF0A3913113332FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3A2D666FEF0A3913113332FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		424D8ABA5CA202E746DA5DDB /* Pods_MJAdaptScreenHelp_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MJAdaptScreenHelp_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5203EDBE3C55D46952BFCED6 /* Pods-MJAdaptScreenHelp_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJAdaptScreenHelp_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MJAdaptScreenHelp_Tests/Pods-MJAdaptScreenHelp_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MJAdaptScreenHelp_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJAdaptScreenHelp_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,9 +62,9 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		63C58386FBCB62E968DB589E /* Pods-MJAdaptScreenHelp_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJAdaptScreenHelp_Example.debug.xcconfig"; path = "Target Support Files/Pods-MJAdaptScreenHelp_Example/Pods-MJAdaptScreenHelp_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		727F95295E301C057EAF9693 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		727F95295E301C057EAF9693 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		92EDDDE3AB292D852E1D770B /* MJAdaptScreenHelp.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MJAdaptScreenHelp.podspec; path = ../MJAdaptScreenHelp.podspec; sourceTree = "<group>"; };
+		92EDDDE3AB292D852E1D770B /* MJAdaptScreenHelp.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MJAdaptScreenHelp.podspec; path = ../MJAdaptScreenHelp.podspec; sourceTree = "<group>"; };
 		9D8F20327E269EB5B6DFFDC1 /* Pods-MJAdaptScreenHelp_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJAdaptScreenHelp_Tests.release.xcconfig"; path = "Target Support Files/Pods-MJAdaptScreenHelp_Tests/Pods-MJAdaptScreenHelp_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B5BFB27A221F13D5A5697428 /* Pods-MJAdaptScreenHelp_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJAdaptScreenHelp_Example.release.xcconfig"; path = "Target Support Files/Pods-MJAdaptScreenHelp_Example/Pods-MJAdaptScreenHelp_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +103,6 @@
 				5203EDBE3C55D46952BFCED6 /* Pods-MJAdaptScreenHelp_Tests.debug.xcconfig */,
 				9D8F20327E269EB5B6DFFDC1 /* Pods-MJAdaptScreenHelp_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +207,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				82F660B64322773F45089591 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +246,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = jgyhc;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 75TU6G6GNQ;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -315,28 +316,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		82F660B64322773F45089591 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MJAdaptScreenHelp_Example/Pods-MJAdaptScreenHelp_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MJAdaptScreenHelp/MJAdaptScreenHelp.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJAdaptScreenHelp.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MJAdaptScreenHelp_Example/Pods-MJAdaptScreenHelp_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9294F887593DCDD8DE29DA61 /* [CP] Check Pods Manifest.lock */ = {
@@ -498,6 +477,7 @@
 			baseConfigurationReference = 63C58386FBCB62E968DB589E /* Pods-MJAdaptScreenHelp_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 75TU6G6GNQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MJAdaptScreenHelp/MJAdaptScreenHelp-Prefix.pch";
 				INFOPLIST_FILE = "MJAdaptScreenHelp/MJAdaptScreenHelp-Info.plist";
@@ -513,6 +493,7 @@
 			baseConfigurationReference = B5BFB27A221F13D5A5697428 /* Pods-MJAdaptScreenHelp_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 75TU6G6GNQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MJAdaptScreenHelp/MJAdaptScreenHelp-Prefix.pch";
 				INFOPLIST_FILE = "MJAdaptScreenHelp/MJAdaptScreenHelp-Info.plist";

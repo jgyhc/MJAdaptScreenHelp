@@ -1,0 +1,16 @@
+PODS:
+  - MJAdaptScreenHelp (0.1.0)
+
+DEPENDENCIES:
+  - MJAdaptScreenHelp (from `../`)
+
+EXTERNAL SOURCES:
+  MJAdaptScreenHelp:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MJAdaptScreenHelp: 3b357025899445bf4039fde54511703fbd7abe8d
+
+PODFILE CHECKSUM: 15134a6bf5e8fb960c27b056bd8c18fa111ab977
+
+COCOAPODS: 1.6.0

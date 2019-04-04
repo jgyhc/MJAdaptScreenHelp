@@ -1,0 +1,22 @@
+{
+  "name": "MJAdaptScreenHelp",
+  "version": "0.1.0",
+  "summary": "A short description of MJAdaptScreenHelp.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jgyhc/MJAdaptScreenHelp",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jgyhc": "jgyhc@foxmail.com.com"
+  },
+  "source": {
+    "git": "https://github.com/jgyhc/MJAdaptScreenHelp.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MJAdaptScreenHelp/Classes/**/*"
+}
